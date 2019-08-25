@@ -166,6 +166,11 @@ module.exports = {
         },
       ],
     },
+    docker: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: '使用docker部署你的项目吗?',
+    }
   },
   filters: {
     '.eslintrc.js': 'lint',
@@ -180,7 +185,10 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
-    'src/store/**/*': 'vuex',
+    'default.conf': 'docker',
+    'run_build': 'docker',
+    'Dockerfile': 'docker',
+    'entrypoint.sh': 'docker',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
