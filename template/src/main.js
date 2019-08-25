@@ -12,6 +12,9 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 {{/element}}
+{{#vuex}}
+import store from './store'
+{{/vuex}}
 
 Vue.config.productionTip = false
 
@@ -21,6 +24,9 @@ new Vue({
   {{#router}}
   router,
   {{/router}}
+  {{#vuex}}
+  store,
+  {{/vuex}}
   {{#if_eq build "runtime"}}
   render: h => h(App)
   {{/if_eq}}

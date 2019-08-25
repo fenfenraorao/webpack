@@ -79,6 +79,11 @@ module.exports = {
       type: 'confirm',
       message: '下载element-ui吗?',
     },
+    vuex: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: '下载vuex吗?',
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
@@ -175,6 +180,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    'src/store/**/*': 'vuex',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
