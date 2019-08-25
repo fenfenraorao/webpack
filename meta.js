@@ -74,6 +74,11 @@ module.exports = {
       type: 'confirm',
       message: '下载vue-router吗?',
     },
+    element: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: '下载element-ui吗?',
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
