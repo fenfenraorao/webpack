@@ -40,6 +40,9 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  externals: {
+    baseUrl:'BASE_URL'
+  },
   module: {
     rules: [
       {{#lint}}
