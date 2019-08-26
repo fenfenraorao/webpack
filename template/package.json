@@ -122,7 +122,7 @@
     "webpack-merge": "^4.1.0",
     {{#sass}}
     "sass-loader":"*",
-    "node-sass":"*",
+    "node-sass":"*"
     {{/sass}}
   },
   "engines": {
