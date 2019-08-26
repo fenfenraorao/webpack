@@ -74,7 +74,7 @@ module.exports = {
       type: 'confirm',
       message: '下载vue-router吗?',
     },
-    element: {
+    elementUI: {
       when: 'isNotTest',
       type: 'confirm',
       message: '下载element-ui吗?',
@@ -195,6 +195,7 @@ module.exports = {
     'Dockerfile': 'docker',
     'entrypoint.sh': 'docker',
     'src/utils/fetch.js': 'axios',
+    'src/styles/element-ui.css': 'elementUI',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

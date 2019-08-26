@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}}{{#element}},
-    "element-ui": "^2.11.0"{{/element}}{{#vuex}},
+    "vue-router": "^3.0.1"{{/router}}{{#elementUI}},
+    "element-ui": "^2.11.0"{{/elementUI}}{{#vuex}},
     "vuex": "^2.4.0"{{/vuex}}{{#axios}},
     "axios": "^0.15.3"{{/axios}}
   },
