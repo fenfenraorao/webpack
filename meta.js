@@ -84,6 +84,11 @@ module.exports = {
       type: 'confirm',
       message: '下载vuex吗?',
     },
+    axios: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: '下载axios吗?',
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
@@ -189,6 +194,7 @@ module.exports = {
     'run_build': 'docker',
     'Dockerfile': 'docker',
     'entrypoint.sh': 'docker',
+    'src/utils/fetch.js': 'axios',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
