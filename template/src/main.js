@@ -7,16 +7,23 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
-{{#element}}
+import './styles/index.css' // 全局自定义的css样式
+{{#elementUI}}
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import './styles/element-ui.css' // 覆盖 Element-UI 的样式
 Vue.use(ElementUI)
-{{/element}}
+{{/elementUI}}
 {{#vuex}}
 import store from './store'
 {{/vuex}}
-
+import * as filters from '@/filters'
 Vue.config.productionTip = false
+
+// 注册全局 Filters
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 /* eslint-disable no-new */
 new Vue({
