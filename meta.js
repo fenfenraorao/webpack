@@ -89,6 +89,11 @@ module.exports = {
       type: 'confirm',
       message: '下载axios吗?',
     },
+    sass: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: '使用sass/scss吗?',
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
@@ -148,6 +153,11 @@ module.exports = {
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },
+    docker: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: '使用docker部署你的项目吗?',
+    },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
@@ -170,11 +180,6 @@ module.exports = {
           short: 'no',
         },
       ],
-    },
-    docker: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: '使用docker部署你的项目吗?',
     }
   },
   filters: {

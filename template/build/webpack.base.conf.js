@@ -39,6 +39,8 @@ module.exports = {
       {{/if_eq}}
       '@': resolve('src'),
       'views': resolve('src/views'),
+      'assets': resolve('src/assets'),
+      'components': resolve('src/components'),
     }
   },
   externals: {
